@@ -6,7 +6,7 @@
  
 ### Cloudfront components  
 
-![CloudFront](cloudfont.jpg) 
+![EmbedImg](https://github.com/satadrubasu/aws-play/blob/main/cloudfront/cloudfront.jpg?raw=true)
 
 
 

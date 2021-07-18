@@ -4,6 +4,11 @@
  python3
  pip
  
+### Cloudfront components  
+
+![CloudFront](cloudfont.jpg) 
+
+
 
 Install awscli using standalone tarball  
 

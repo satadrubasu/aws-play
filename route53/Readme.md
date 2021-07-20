@@ -43,6 +43,8 @@ Every client must know the root nameserver to perform this recursive search.
 
 ## Internet / Public Domain Namespace  
 
-
 ![EmbedImg](https://github.com/satadrubasu/aws-play/blob/main/route53/Route53-HostedZone.jpg?raw=true)
 
+## Health Checks and Failover via Route53
+
+![EmbedImg](https://github.com/satadrubasu/aws-play/blob/main/route53/route53-failover.jpg?raw=true)

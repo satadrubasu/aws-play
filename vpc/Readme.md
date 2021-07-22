@@ -16,3 +16,6 @@
 5. On-Pre office ( ATL ) - (Chinchwad) offices connected via VPN
 
 
+![EmbedImg](https://github.com/satadrubasu/aws-play/blob/main/vpc/vpc-uc1.jpg?raw=true)
+
+

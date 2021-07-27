@@ -51,3 +51,37 @@ Amazon Kinesis Data Streams for DynamoDB captures item-level changes in your tab
 
 DynamoDB stream details
 Capture item-level changes in your table, and push the changes to a DynamoDB stream. You then can access the change information through the DynamoDB Streams API.
+
+======= RDS ====
+
+RDS
+======
+1. Engine Choice + Engine Version  = Aurora | Mysql | Maria | PostgreSQl | Oracle | MS SQL
+2. Credentials
+3. DB Instance ~= Instance Type ( vcpu / Ram / Network )
+          Standard Class / Memory Optimized / Burstable
+4. Storage Type ( gp / io1 / magnetic )  / Provisioned IOPS
+5. Enable Storage Auto scaling ( X GB)
+6. Availability : Standby in a different AZ of same region.
+            synchronous standby replica
+   For Aurora -> Replica / Reader node in diff AZ for scaled availability
+
+7. Connectivity : VPC / subnet group / public access etc
+8. Automated Backups (Point in Time ) + Backup retention period ( <=35 days )
+9. Encryption - AWS KMS Key
+10. Enhanced Monitoring = 1 second interval.
+11. Log Export to CloudWatch
+12. Maintenance - Enable auto minor version update.
+13. Deletion Protection.
+
+14. Event Subscription - Target Notifications to
+    i) ARN  = ONLY SNS
+    ii) New Email topic
+
+ From SNS -- Kinesis Data Firehose | SQS | Lambda | Email | Http | SMS
+
+Failover ( RDS )
+
+The failover mechanism automatically changes the Domain Name System (DNS) record of the DB instance to point to the standby DB instance. As a result, you need to re-establish any existing connections to your DB instance. In a Java virtual machine (JVM) environment, due to how the Java DNS caching mechanism works, you might need to reconfigure JVM settings.
+The JVM caches DNS name lookups. When the JVM resolves a hostname to an IP address, it caches the IP address for a specified period of time, known as the time-to-live (TTL).
+

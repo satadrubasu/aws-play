@@ -24,23 +24,23 @@ provider "aws" {
 
 ### Run
 
- Download all defined provider plugins under .terraform dir created
- > terraform init
+ Download all defined provider plugins under .terraform dir created  
+ > terraform init  
 
- Dry run by running the plan 
- > terraform plan 
+ Dry run by running the plan  
+ > terraform plan  
 
- Dry run by running the plan 
- > terraform apply
+ Dry run by running the plan   
+ > terraform apply  
  
- Dry run by running the plan 
- > terraform destroy
+ Dry run by running the plan   
+ > terraform destroy  
 
- Inspect the state 
- > terraform state list
- > terraform state show <item_from_outout>
+ Inspect the state   
+ > terraform state list  
+ > terraform state show <item_from_outout>  
  
- For printing certain created values at end of apply
+ For printing certain created values at end of apply  
  ```
   output "server_public_ip" {
   value = aws_eip.tf_eip_web.public_ip }

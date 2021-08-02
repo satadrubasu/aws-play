@@ -168,11 +168,11 @@ resource "aws_instance" "tf_web_inst" {
               sudo yum install -y httpd
               sudo systemctl start httpd
               sudo systemctl enable httpd
-
+              EC2_AVAIL_ZONE=$(curl -s http://169.254.169.254/latest/meta-data/placement/availability-zone))
               cat << EOF > /var/www/html/index.html
               <html>
                <body>
-                 Hello from the server
+                 Hello from the server at -  {EC2_AVAIL_ZONE}
                </body>
               </html>
               EOF 

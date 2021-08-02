@@ -19,5 +19,5 @@ aws_secret_access_key =  ssssssssssssssQEeaw
 
 ### Inspect the state
 
- > terraform state list
- > terraform state show <item_from_outout>
+ > terraform state list  
+ > terraform state show <item_from_outout>  

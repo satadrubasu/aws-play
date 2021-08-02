@@ -164,12 +164,19 @@ resource "aws_instance" "tf_web_inst" {
   }
   user_data = <<-EOF
               #!/bin/bash
-              sudo apt update -y
-              sudo apt install apache2 -y
-              sudo apt systemctl start apache2
-              sudo bash -c 'echo Your Apache web is saying Hello > /var/www/html/index.html'
-              EOF
-  tags = {
+              sudo yum update -y
+              sudo yum install -y httpd
+              sudo systemctl start httpd
+              sudo systemctl enable httpd
+
+              cat << EOF > /var/www/html/index.html
+              <html>
+               <body>
+                 Hello from the server
+               </body>
+              </html>
+              EOF 
+ tags = {
     Name = "basicHelloApacheWeb"
   }
 }

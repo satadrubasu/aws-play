@@ -85,7 +85,11 @@ While DNS Server follow the recursion logic , the calling location is matched ag
 |www.abc.com|A|Geolocation-(SC)|USA-SC|web2-east.abc.com|
 |www.abc.com|A|Geolocation-(default)|default|web1-west.abc.com|
 
- * Latency policy works almost similarly, where the latency is calculated to the aws region.
+ * Latency policy works almost similarly, where the latency is calculated to the aws region that hosts the servers and returns the record details where latency is the least.  
+
+### 4. Route53 [ Policy - Failover ]
+ - Conigure health checks and choose which is primary and secondary.  
+
 
 ### 4. Route53 [ Policy - Geoproximity ]
  - Configurable with diagram
@@ -97,4 +101,13 @@ While DNS Server follow the recursion logic , the calling location is matched ag
  - Only Difference being MultiValue has health check provision and won't return the IP thats not healthy. 
 
 
+### 6. Review pointers :
+  1) CNAME vs ALIAS  ( ALias is free | Alias can apply to root domain )
+         CNAME can only be applied to sub-domain not the apex.
+  
+  2) Simple Routing Policy doesnt allow health check
+  3) Simple Routing - client choose random IP in case of multiple IP A records.
+  4) Weighted Routing 
+       - Health Check Enabled
+       - Weight Across regions
 

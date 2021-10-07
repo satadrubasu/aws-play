@@ -14,10 +14,11 @@ aws_secret_access_key =  ssssssssssssssQEeaw
   ```
 
 ### Usage with default values placed in tfvars file
-
+ > terraform init  
  > terraform apply -var-file dev-variables.tfvars
 
 ### Inspect the state
 
  > terraform state list  
  > terraform state show <item_from_outout>  
+
